@@ -1,15 +1,18 @@
-# Monkey-Interpreter
+# Monkey Interpreter
+A fully functional interpreter for the Monkey programming language, written in Go.
 
-## A fully functional interpreter for the Monkey programming language written in Go.
+## Demo
+https://github.com/user-attachments/assets/4909d89e-e96e-4222-8c1c-4069eb46f832
 
-This interpreter has a full lexer, parser, AST, and evaluator with support for integers, strings, booleans, etc. 
+## Features
+- Lexer, parser, AST, and tree-walking evaluator
+- Data types: integers, strings, booleans, arrays, hashes
+- First-class functions and closures
+- Interactive REPL
 
-Diagram or video (optional)
-
-Installation instructions for users
-
-Installation instructions for developers
-
-Contributor expectations
-
-Known issues
+## How It Works
+Source code flows through four stages: the **lexer** converts raw text into
+tokens, the **parser** consumes those tokens and builds an AST, and the
+**evaluator** walks the AST to produce values represented as **objects**.
+The object system also maintains an environment for variable bindings, enabling
+closures. The **REPL** wires these stages together in a loop.
